@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on /dev/notes</title>
-    <link>/tags/blog/</link>
-    <description>Recent content in Blog on /dev/notes</description>
+    <title>Git on /dev/notes</title>
+    <link>/tags/git/</link>
+    <description>Recent content in Git on /dev/notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2017, Gyorgy Orban all rights reserved.</copyright>
     <lastBuildDate>Thu, 23 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       
       <guid>/post/hugo_setup/</guid>
       <description>In this post I will introduce my current Hugo setup. I will show you how I configured the git repositories, how I write new posts and how easy it is to publish the generated site on GitHub pages. With a static site generator like Hugo it is really easy to create a blogging environment where your posts and your site is version controlled and stored in git.</description>
-    </item>
-    
-    <item>
-      <title>Hello world!</title>
-      <link>/post/hello-world/</link>
-      <pubDate>Sat, 22 Apr 2017 23:13:53 +0200</pubDate>
-      
-      <guid>/post/hello-world/</guid>
-      <description>Hi, my name is Gyorgy Orban and I work as a software developer. I thougth about starting a technical blog a long time ago and now it&amp;rsquo;s time to start it. My goal with this blog is to organize, archive and share my thoughts.
-I plan to post about the projects I&amp;rsquo;m working on or about technologies I find interesting and useful.</description>
     </item>
     
   </channel>
