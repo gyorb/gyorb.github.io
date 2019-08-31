@@ -13,7 +13,7 @@
     
     
     <item>
-      <title>Blog</title>
+      <title>blog</title>
       <link>/tags/blog/</link>
       <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
       
@@ -22,7 +22,7 @@
     </item>
     
     <item>
-      <title>Git</title>
+      <title>git</title>
       <link>/tags/git/</link>
       <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
       
@@ -31,7 +31,7 @@
     </item>
     
     <item>
-      <title>Github</title>
+      <title>github</title>
       <link>/tags/github/</link>
       <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
       
@@ -40,7 +40,7 @@
     </item>
     
     <item>
-      <title>Hugo</title>
+      <title>hugo</title>
       <link>/tags/hugo/</link>
       <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
       
