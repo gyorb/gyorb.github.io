@@ -8,7 +8,7 @@
     --main-text: #ffffff;
     --main-sec: #99cc66; /* main secondary color for the site */
     --code-quote-bg: #1D1F21; /* background color for quotes and code blocks */
-    --copyright: #404040; /* copyright text color */
+    --copyright: #808080; /* copyright text color */
 }
 
 body {
@@ -18,6 +18,24 @@ body {
 
 a {
   color: var(--main-text);
+}
+
+.__h_instagram.card {
+  border: 1px solid #303030 !important;
+}
+
+.__h_instagram .card-text {
+  color: var(--main-text);
+}
+
+.__h_instagram .card-header {
+  color: var(--main-bg-color);
+  background-color: #101010;
+}
+
+.__h_instagram .card-body {
+  color: var(--main-bg-color);
+  background-color: #101010;
 }
 
 pre {
@@ -30,6 +48,14 @@ code {
   background-color: transparent;
 }
 
+/* 
+ * syntax highlight code block table backround
+ * looks better if overwritten.
+ * */
+.post .content .highlight table {
+  background-color: #202020 !important;
+}
+
 blockquote {
   background: var(--main-bg-color);
   border-left: 3px solid var(--main-sec);
@@ -38,14 +64,16 @@ blockquote {
 table { margin: 1em auto; border-collapse: collapse; }
 table, th, td { border: 1px solid #5C5C5C; }
 tr:hover { background: #1D1F21; }
-th { background: #1D1F21; }
+th { background: #101010; }
 .siteTitle a {
   color: var(--main-sec);
 }
 
 .post {
   background: #202020;
-  border: 1px solid #303030;
+  border-left: 1px solid #303030;
+  border-right: 1px solid #303030;
+  border-top: 1px solid #303030;
   border-radius: 0.2em;
   box-shadow: 0 1px 2px 0 #000000, 0 2px 5px 0 #000000;
 }
@@ -77,6 +105,15 @@ th { background: #1D1F21; }
 
 .post-preview .title a {
   color: var(--main-sec);
+}
+
+.post-footer-data {
+  background-color: #101010;
+  border-bottom: 1px solid #303030;
+}
+
+.post-footer hr {
+  color: #303030;
 }
 
 .content-item {

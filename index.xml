@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>/dev/notes</title>
@@ -37,8 +37,8 @@ You can check your C/C++ project easily and filter/view the results on a web int
       <pubDate>Sat, 22 Apr 2017 23:13:53 +0200</pubDate>
       
       <guid>/post/hello-world/</guid>
-      <description>Hi, my name is Gyorgy Orban and I work as a software developer. I thougth about starting a technical blog a long time ago and now it&amp;rsquo;s time to start it. My goal with this blog is to organize, archive and share my thoughts.
-I plan to post about the projects I&amp;rsquo;m working on or about technologies I find interesting and useful.</description>
+      <description>Hi, my name is Gyorgy Orban and I work as a software developer. I thougth about starting a technical blog a long time ago and now it&#39;s time to start it. My goal with this blog is to organize, archive and share my thoughts.
+I plan to post about the projects I&#39;m working on or about technologies I find interesting and useful.</description>
     </item>
     
     <item>
@@ -47,7 +47,7 @@ I plan to post about the projects I&amp;rsquo;m working on or about technologies
       <pubDate>Sat, 08 Apr 2017 22:39:07 +0200</pubDate>
       
       <guid>/about/</guid>
-      <description>Who am I? Hi, I&amp;rsquo;m Gyorgy Orban and this is my personal blog. I love to create software and I&amp;rsquo;m a full time software developer. I&amp;rsquo;ve worked on multiple telecom related projects over the years. Currently I&amp;rsquo;m involved in the open source development of the CodeChecker project.
+      <description>Who am I? Hi, I&#39;m Gyorgy Orban and this is my personal blog. I love to create software and I&#39;m a full time software developer. I&#39;ve worked on multiple telecom related projects over the years. Currently I&#39;m involved in the open source development of the CodeChecker project.
 I code mostly in Python but I play with other languages too.</description>
     </item>
     

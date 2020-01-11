@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on /dev/notes</title>
@@ -27,8 +27,8 @@
       <pubDate>Sat, 22 Apr 2017 23:13:53 +0200</pubDate>
       
       <guid>/post/hello-world/</guid>
-      <description>Hi, my name is Gyorgy Orban and I work as a software developer. I thougth about starting a technical blog a long time ago and now it&amp;rsquo;s time to start it. My goal with this blog is to organize, archive and share my thoughts.
-I plan to post about the projects I&amp;rsquo;m working on or about technologies I find interesting and useful.</description>
+      <description>Hi, my name is Gyorgy Orban and I work as a software developer. I thougth about starting a technical blog a long time ago and now it&#39;s time to start it. My goal with this blog is to organize, archive and share my thoughts.
+I plan to post about the projects I&#39;m working on or about technologies I find interesting and useful.</description>
     </item>
     
   </channel>
