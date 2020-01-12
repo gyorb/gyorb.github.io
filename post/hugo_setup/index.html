@@ -11,7 +11,8 @@
 
 <link rel="canonical" href="/post/hugo_setup/">
 <meta property="og:title" content="My Hugo setup for GitHub pages" />
-<meta property="og:description" content="In this post I will introduce my current Hugo setup. I will show you how I configured the git repositories, how I write new posts and how easy it is to publish the generated site on GitHub pages. With a static site generator like Hugo it is really easy to create a blogging environment where your posts and your site is version controlled and stored in git." />
+<meta property="og:description" content="In this post I will introduce my current Hugo setup. I will show you how I configured the git repositories, how I write new posts and how easy it is to publish the generated site on GitHub pages. With a static site generator like Hugo it is really easy to create a blogging environment where your posts and your site is version controlled and stored in git.
+Why I&#39;ve changed my first setup I&#39;ve tried to use one git repository for the generated site and for the posts in markdown together." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/hugo_setup/" />
 <meta property="article:published_time" content="2017-11-23T00:00:00+00:00" />
@@ -19,11 +20,13 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="My Hugo setup for GitHub pages"/>
-<meta name="twitter:description" content="In this post I will introduce my current Hugo setup. I will show you how I configured the git repositories, how I write new posts and how easy it is to publish the generated site on GitHub pages. With a static site generator like Hugo it is really easy to create a blogging environment where your posts and your site is version controlled and stored in git."/>
+<meta name="twitter:description" content="In this post I will introduce my current Hugo setup. I will show you how I configured the git repositories, how I write new posts and how easy it is to publish the generated site on GitHub pages. With a static site generator like Hugo it is really easy to create a blogging environment where your posts and your site is version controlled and stored in git.
+Why I&#39;ve changed my first setup I&#39;ve tried to use one git repository for the generated site and for the posts in markdown together."/>
 
 
 <meta itemprop="name" content="My Hugo setup for GitHub pages">
-<meta itemprop="description" content="In this post I will introduce my current Hugo setup. I will show you how I configured the git repositories, how I write new posts and how easy it is to publish the generated site on GitHub pages. With a static site generator like Hugo it is really easy to create a blogging environment where your posts and your site is version controlled and stored in git.">
+<meta itemprop="description" content="In this post I will introduce my current Hugo setup. I will show you how I configured the git repositories, how I write new posts and how easy it is to publish the generated site on GitHub pages. With a static site generator like Hugo it is really easy to create a blogging environment where your posts and your site is version controlled and stored in git.
+Why I&#39;ve changed my first setup I&#39;ve tried to use one git repository for the generated site and for the posts in markdown together.">
 <meta itemprop="datePublished" content="2017-11-23T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2017-11-23T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="752">
@@ -131,36 +134,36 @@ setup in the following sections.</p>
 try out the second solution to see how well it works for me.</p>
 <h2 id="setup-the-git-repositories">Setup the git repositories</h2>
 <p>Create an empty content repository on GitHub and clone it:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git clone https://github.com/GH_USERNAME/site_content_repo.git 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git clone https://github.com/GH_USERNAME/site_content_repo.git 
 </code></pre></div><p>After cloning the site content repository the theme and the user pages
 repositories will be added as
 <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodules</a>.
 You can find many great themes <a href="https://themes.gohugo.io/">here</a> for your site.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ <span style="color:#24909d">cd</span> site_content_repo
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ cd site_content_repo
 
-<span style="color:#999;font-style:italic"># add a theme as a submodule</span>
+<span style="color:#0f0"># add a theme as a submodule</span>
 $ git submodule add https://github.com/gyorb/hugo-dusk.git themes/hugo-dusk
 
 $ git add themes
-$ git commit -m <span style="color:#ed9d13">&#34;add new theme&#34;</span>
+$ git commit -m <span style="color:#87ceeb">&#34;add new theme&#34;</span>
 
-<span style="color:#999;font-style:italic"># add your github user pages repository as a submodule</span>
+<span style="color:#0f0"># add your github user pages repository as a submodule</span>
 $ git submodule add https://github.com/GH_USERNAME/GH_USERNAME.github.io.git public
 
 $ git add public
-$ git commit -m <span style="color:#ed9d13">&#34;add github pages repository&#34;</span>
+$ git commit -m <span style="color:#87ceeb">&#34;add github pages repository&#34;</span>
 </code></pre></div><p>We are ready with the git repository setup so we can move on how to create a
 post.</p>
 <h2 id="write-a-new-post">Write a new post</h2>
 <p>For each new post I create a new branch.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git checkout -b post/my_new_post master
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git checkout -b post/my_new_post master
 
-<span style="color:#999;font-style:italic"># add new hugo post</span>
+<span style="color:#0f0"># add new hugo post</span>
 $ hugo new post/new_post.md
 </code></pre></div><p>On the newly created branch I can work on the new post until it is
 finished and ready to publish.
 When I'm ready with my post I merge that branch into the <code>master</code> branch.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git checkout master
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git checkout master
 $ git merge post/my_new_post
 </code></pre></div><p>After merging the branch with the new post I can rebuild and publish the site
 with the new content.</p>
@@ -172,52 +175,52 @@ repositories on GitHub.</p>
 <p>The script allows to rebuild the site only from the <code>master</code> branch and warns
 if there are uncommitted changes, so the published site and the content
 repository will not be out of sync.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#cd2828;font-weight:bold">#!/bin/bash
-</span><span style="color:#cd2828;font-weight:bold"></span>
-<span style="color:#40ffff">branch_name</span>=<span style="color:#6ab825;font-weight:bold">$(</span>git rev-parse --abbrev-ref HEAD<span style="color:#6ab825;font-weight:bold">)</span>
-<span style="color:#6ab825;font-weight:bold">if</span> [[ <span style="color:#ed9d13">&#34;master&#34;</span> != <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$branch_name</span><span style="color:#ed9d13">&#34;</span> ]]
-<span style="color:#6ab825;font-weight:bold">then</span>
-    <span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;Site should be rebuilt on master branch.&#34;</span>
-    <span style="color:#24909d">exit</span> 1;
-<span style="color:#6ab825;font-weight:bold">fi</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#e5e5e5">#!/bin/bash
+</span><span style="color:#e5e5e5"></span>
+<span style="color:#eedd82">branch_name</span>=<span style="color:#f00">$(</span>git rev-parse --abbrev-ref HEAD<span style="color:#f00">)</span>
+<span style="color:#f00">if</span> [[ <span style="color:#87ceeb">&#34;master&#34;</span> != <span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$branch_name</span><span style="color:#87ceeb">&#34;</span> ]]
+<span style="color:#f00">then</span>
+    echo <span style="color:#87ceeb">&#34;Site should be rebuilt on master branch.&#34;</span>
+    exit 1;
+<span style="color:#f00">fi</span>
 
-<span style="color:#6ab825;font-weight:bold">if</span> [[ <span style="color:#6ab825;font-weight:bold">$(</span>git status -s<span style="color:#6ab825;font-weight:bold">)</span> ]]
-<span style="color:#6ab825;font-weight:bold">then</span>
-    <span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;Everything should be committed before rebuilding the site.&#34;</span>
-    <span style="color:#24909d">exit</span> 1;
-<span style="color:#6ab825;font-weight:bold">fi</span>
+<span style="color:#f00">if</span> [[ <span style="color:#f00">$(</span>git status -s<span style="color:#f00">)</span> ]]
+<span style="color:#f00">then</span>
+    echo <span style="color:#87ceeb">&#34;Everything should be committed before rebuilding the site.&#34;</span>
+    exit 1;
+<span style="color:#f00">fi</span>
 
-<span style="color:#999;font-style:italic"># rebuild the site</span>
+<span style="color:#0f0"># rebuild the site</span>
 hugo
 
-<span style="color:#999;font-style:italic"># publish the site</span>
-<span style="color:#24909d">cd</span> public
+<span style="color:#0f0"># publish the site</span>
+cd public
 
 git add .
-<span style="color:#40ffff">msg</span>=<span style="color:#ed9d13">&#34;site rebuilt on `date +%D`&#34;</span>
-<span style="color:#6ab825;font-weight:bold">if</span> [ <span style="color:#40ffff">$#</span> -eq <span style="color:#3677a9">1</span> ]
-  <span style="color:#6ab825;font-weight:bold">then</span> <span style="color:#40ffff">msg</span>=<span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$1</span><span style="color:#ed9d13">&#34;</span>
-<span style="color:#6ab825;font-weight:bold">fi</span>
-git commit -m <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$msg</span><span style="color:#ed9d13">&#34;</span>
+<span style="color:#eedd82">msg</span>=<span style="color:#87ceeb">&#34;site rebuilt on `date +%D`&#34;</span>
+<span style="color:#f00">if</span> [ <span style="color:#eedd82">$#</span> -eq <span style="color:#f60">1</span> ]
+  <span style="color:#f00">then</span> <span style="color:#eedd82">msg</span>=<span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$1</span><span style="color:#87ceeb">&#34;</span>
+<span style="color:#f00">fi</span>
+git commit -m <span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$msg</span><span style="color:#87ceeb">&#34;</span>
 
 git push origin master
 
-<span style="color:#24909d">cd</span> ..
+cd ..
 
-<span style="color:#999;font-style:italic"># add submodule (public) changes</span>
+<span style="color:#0f0"># add submodule (public) changes</span>
 git add public
-git commit -m <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$msg</span><span style="color:#ed9d13">&#34;</span>
+git commit -m <span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$msg</span><span style="color:#87ceeb">&#34;</span>
 git push origin master
 </code></pre></div><h2 id="update-the-theme">Update the theme</h2>
 <p>If there is a new version of your selected theme updating it is quite easy.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#24909d">cd</span> themes/hugo-dusk
-<span style="color:#999;font-style:italic"># get the lates version</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd themes/hugo-dusk
+<span style="color:#0f0"># get the lates version</span>
 git pull origin
-<span style="color:#24909d">cd</span> ../../
+cd ../../
 
-<span style="color:#999;font-style:italic"># commit the submodule change in your site_content_repo</span>
+<span style="color:#0f0"># commit the submodule change in your site_content_repo</span>
 git add themes
-git commit -m <span style="color:#ed9d13">&#39;theme updated&#39;</span>
+git commit -m <span style="color:#87ceeb">&#39;theme updated&#39;</span>
 </code></pre></div><p>This is my current blogging setup and I'm pretty happy with it for now.</p>
  </div>
     <footer class="post-footer">

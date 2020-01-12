@@ -28,7 +28,8 @@ You can check your C/C++ project easily and filter/view the results on a web int
       <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>/post/hugo_setup/</guid>
-      <description>In this post I will introduce my current Hugo setup. I will show you how I configured the git repositories, how I write new posts and how easy it is to publish the generated site on GitHub pages. With a static site generator like Hugo it is really easy to create a blogging environment where your posts and your site is version controlled and stored in git.</description>
+      <description>In this post I will introduce my current Hugo setup. I will show you how I configured the git repositories, how I write new posts and how easy it is to publish the generated site on GitHub pages. With a static site generator like Hugo it is really easy to create a blogging environment where your posts and your site is version controlled and stored in git.
+Why I&#39;ve changed my first setup I&#39;ve tried to use one git repository for the generated site and for the posts in markdown together.</description>
     </item>
     
     <item>
@@ -38,7 +39,8 @@ You can check your C/C++ project easily and filter/view the results on a web int
       
       <guid>/post/hello-world/</guid>
       <description>Hi, my name is Gyorgy Orban and I work as a software developer. I thougth about starting a technical blog a long time ago and now it&#39;s time to start it. My goal with this blog is to organize, archive and share my thoughts.
-I plan to post about the projects I&#39;m working on or about technologies I find interesting and useful.</description>
+I plan to post about the projects I&#39;m working on or about technologies I find interesting and useful.
+Stay tuned for my next post!</description>
     </item>
     
     <item>
@@ -48,7 +50,7 @@ I plan to post about the projects I&#39;m working on or about technologies I fin
       
       <guid>/about/</guid>
       <description>Who am I? Hi, I&#39;m Gyorgy Orban and this is my personal blog. I love to create software and I&#39;m a full time software developer. I&#39;ve worked on multiple telecom related projects over the years. Currently I&#39;m involved in the open source development of the CodeChecker project.
-I code mostly in Python but I play with other languages too.</description>
+I code mostly in Python but I play with other languages too. You can read more about my projects on my code page.</description>
     </item>
     
   </channel>
