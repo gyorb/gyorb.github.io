@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="Gyorgy Orban" />
+<meta name="description" content="Personal blog about software development." />
+<meta name="keywords" content="linux, software development, python" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.63.2" />
+
+<link rel="canonical" href="/post/fzf-notes/">
+<meta property="og:title" content="Using fzf to quick access my notes from the cli" />
+<meta property="og:description" content="I wanted to create a simple script to quickly access my notes from the command line. fzf is a great and flexible tool which can be used to fuzzy search in the given input, like the file names in my notes directory. I already use it to search in the command line history and in vim to open files with fzf.vim. In this post I will walk you through how I built my note script using fzf." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/fzf-notes/" />
+<meta property="article:published_time" content="2020-01-19T16:32:32+01:00" />
+<meta property="article:modified_time" content="2020-01-19T16:32:32+01:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Using fzf to quick access my notes from the cli"/>
+<meta name="twitter:description" content="I wanted to create a simple script to quickly access my notes from the command line. fzf is a great and flexible tool which can be used to fuzzy search in the given input, like the file names in my notes directory. I already use it to search in the command line history and in vim to open files with fzf.vim. In this post I will walk you through how I built my note script using fzf."/>
+
+
+<meta itemprop="name" content="Using fzf to quick access my notes from the cli">
+<meta itemprop="description" content="I wanted to create a simple script to quickly access my notes from the command line. fzf is a great and flexible tool which can be used to fuzzy search in the given input, like the file names in my notes directory. I already use it to search in the command line history and in vim to open files with fzf.vim. In this post I will walk you through how I built my note script using fzf.">
+<meta itemprop="datePublished" content="2020-01-19T16:32:32&#43;01:00" />
+<meta itemprop="dateModified" content="2020-01-19T16:32:32&#43;01:00" />
+<meta itemprop="wordCount" content="678">
+
+
+
+<meta itemprop="keywords" content="fzf,note,cli,bash,linux," />
+
+<link rel="stylesheet" href="/css/layout.css" />
+
+
+<link rel="stylesheet" href="/css/default-dark.css" />
+
+
+
+
+<title>
+
+
+     Using fzf to quick access my notes from the cli 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">/dev/notes</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="/code/"><div class="nav-item-title">Code</div></a>
+    
+    <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="/about/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+
+  
+<div class="social-links-header">
+
+  
+
+  
+  <a href="https://github.com/gyorb" target="_blank"><div class="social-link">gh</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/gyorgyorban" target="_blank"><div class="social-link">twtr</div></a>
+  
+
+  
+
+</div>
+
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Using fzf to quick access my notes from the cli </h1>
+    <div class="content"> <p>I wanted to create a simple script to quickly access my notes from the
+command line.
+<a href="https://github.com/junegunn/fzf">fzf</a> is a great and flexible tool which
+can be used to fuzzy search in the given input, like the file names in my
+notes directory. I already use it to search in the
+<a href="https://github.com/junegunn/fzf/wiki/examples#command-history">command line history</a>
+and in vim to open files with <a href="https://github.com/junegunn/fzf.vim">fzf.vim</a>.
+In this post I will walk you through how I built my <code>note</code> script using fzf.</p>
+<h2 id="building-the-script">Building the script</h2>
+<p>Executing the command <code>fzf</code> in the cli without any options will list all the
+files for the current and every sub directory. The first thing I do in the script
+is to change the directory where I store my notes and execute <code>fzf</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#e5e5e5">#!/bin/bash
+</span><span style="color:#e5e5e5"></span>
+<span style="color:#eedd82">notes_dir</span>=<span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$HOME</span><span style="color:#87ceeb">/notes</span><span style="color:#87ceeb">&#34;</span>
+cd <span style="color:#eedd82">$notes_dir</span>
+</code></pre></div><p>I will need the output of fzf and the exit code later so I save them too.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#eedd82">fzf_output</span>=<span style="color:#f00">$(</span>fzf<span style="color:#f00">)</span>
+<span style="color:#eedd82">exit_code</span>=<span style="color:#eedd82">$?</span>
+</code></pre></div><h2 id="fzf-options">fzf options</h2>
+<p>fzf has many customization options how to show the results.
+One of the most important one for this script is the
+<code>--print-query</code> option which prints the query what we typed in
+so it can be used to create a new file if there is no match.
+The value of the query is printed before the match in a new line in the
+fzf output.</p>
+<p>Additionally to the <code>--print-query</code> option I use some styling
+options like: <code>--border</code> and the <code>--preview</code> to show the first
+20 lines from a note.
+My final version with all the parameters of the executed <code>fzf</code> command
+looks like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#eedd82">fzf_output</span>=<span style="color:#f00">$(</span>fzf --reverse --prompt=<span style="color:#eedd82">$notes_dir</span>/ --border --print-query --preview=<span style="color:#87ceeb">&#34;head -n 20 {+}&#34;</span> --preview-window=down:50% --inline-info<span style="color:#f00">)</span>
+</code></pre></div><p>The full list of options can be listed with the <code>fzf --help</code> command and
+by viewing the man page for fzf (<code>man fzf</code>).</p>
+<h2 id="process-the-output-from-fzf">Process the output from fzf</h2>
+<p>To work with output of the fzf command I will split the output into an
+array in the bash script, where the query we typed in will be the
+first line and if there is a match it will be printed in the second line.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0f0"># split the output into an array</span>
+readarray -t y &lt;&lt;&lt;<span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$fzf_output</span><span style="color:#87ceeb">&#34;</span>
+
+<span style="color:#eedd82">query</span>=<span style="color:#87ceeb">${</span><span style="color:#eedd82">y</span>[0]<span style="color:#87ceeb">}</span> <span style="color:#0f0"># query is the firts line</span>
+<span style="color:#eedd82">match</span>=<span style="color:#87ceeb">${</span><span style="color:#eedd82">y</span>[1]<span style="color:#87ceeb">}</span> <span style="color:#0f0"># match is the second line if there is any</span>
+</code></pre></div><h2 id="open-or-create-a-note">Open or create a note</h2>
+<p>fzf has multiple exit codes which is very great if we want to build
+additional tooling around it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f60">0</span>      Normal exit
+<span style="color:#f60">1</span>      No match
+<span style="color:#f60">2</span>      Error
+<span style="color:#f60">130</span>    Interrupted with CTRL-C or ESC
+</code></pre></div><p>Based on the exit code the script will decide what to do.
+Open an existing note or to create a new. Using the <code>$EDITOR</code>
+environment variable will make it more flexible. No change
+is needed if some other editor is set in the environment.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#f00">if</span> [[ <span style="color:#f60">0</span> -eq <span style="color:#eedd82">$exit_code</span> ]]; <span style="color:#f00">then</span>
+  <span style="color:#0f0"># open the matched file with an editor</span>
+  <span style="color:#eedd82">$EDITOR</span> <span style="color:#eedd82">$notes_dir</span>/<span style="color:#eedd82">$match</span>
+<span style="color:#f00">elif</span> [[ <span style="color:#f60">1</span> -eq <span style="color:#eedd82">$exit_code</span> ]]; <span style="color:#f00">then</span>
+  <span style="color:#0f0"># create a new md file where the file name will be the query</span>
+  <span style="color:#eedd82">$EDITOR</span> <span style="color:#eedd82">$notes_dir</span>/<span style="color:#eedd82">$query</span>.md
+<span style="color:#f00">fi</span>
+</code></pre></div><h2 id="the-whole-script">The whole script</h2>
+<p>After going through on each part this is the whole script.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#e5e5e5">#!/bin/bash
+</span><span style="color:#e5e5e5"></span>
+<span style="color:#eedd82">notes_dir</span>=<span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$HOME</span><span style="color:#87ceeb">/notes</span><span style="color:#87ceeb">&#34;</span>
+cd <span style="color:#eedd82">$notes_dir</span>
+
+<span style="color:#eedd82">fzf_output</span>=<span style="color:#f00">$(</span>fzf --reverse --prompt=<span style="color:#eedd82">$notes_dir</span>/ --border --print-query --preview=<span style="color:#87ceeb">&#34;head -n 20 {+}&#34;</span> --preview-window=down:50% --inline-info<span style="color:#f00">)</span>
+<span style="color:#eedd82">exitcode</span>=<span style="color:#eedd82">$?</span>
+
+<span style="color:#0f0"># --print-query prints the query which can be used</span>
+<span style="color:#0f0"># to create a new file if there is no match</span>
+<span style="color:#0f0"># in this case the query is printed before a match in a new line</span>
+
+<span style="color:#0f0"># split the output into an array</span>
+readarray -t y &lt;&lt;&lt;<span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$fzf_output</span><span style="color:#87ceeb">&#34;</span>
+
+<span style="color:#eedd82">query</span>=<span style="color:#87ceeb">${</span><span style="color:#eedd82">y</span>[0]<span style="color:#87ceeb">}</span> <span style="color:#0f0"># query is the firts line</span>
+<span style="color:#eedd82">match</span>=<span style="color:#87ceeb">${</span><span style="color:#eedd82">y</span>[1]<span style="color:#87ceeb">}</span> <span style="color:#0f0"># match is the second line if there is any</span>
+
+<span style="color:#0f0"># Exit codes</span>
+<span style="color:#0f0">#0      Normal exit</span>
+<span style="color:#0f0">#1      No match</span>
+<span style="color:#0f0">#2      Error</span>
+<span style="color:#0f0">#130    Interrupted with CTRL-C or ESC</span>
+<span style="color:#f00">if</span> [[ <span style="color:#f60">0</span> -eq <span style="color:#eedd82">$exitcode</span> ]]; <span style="color:#f00">then</span>
+  <span style="color:#0f0"># open the matched file with an editor</span>
+  <span style="color:#eedd82">$EDITOR</span> <span style="color:#eedd82">$notes_dir</span>/<span style="color:#eedd82">$match</span>
+<span style="color:#f00">elif</span> [[ <span style="color:#f60">1</span> -eq <span style="color:#eedd82">$exitcode</span> ]]; <span style="color:#f00">then</span>
+  <span style="color:#0f0"># create a new md file where the file name will be the query</span>
+  <span style="color:#eedd82">$EDITOR</span> <span style="color:#eedd82">$notes_dir</span>/<span style="color:#eedd82">$query</span>.md
+<span style="color:#f00">fi</span>
+</code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>As you can see it is very easy to create additional scripts around fzf to
+improve your cli environment.
+There are many great fzf <a href="https://github.com/junegunn/fzf/wiki/examples">examples</a>
+worth checking out (<a href="https://github.com/junegunn/fzf/wiki/Examples#docker">docker</a>,
+<a href="https://github.com/junegunn/fzf/wiki/Examples#git">git</a> &hellip;)
+if you want to improve your cli tools.</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+            
+<div class="tags">
+  
+    
+      <div class="tag">
+        <a href="/tags/fzf">#fzf</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/note">#note</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/cli">#cli</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/bash">#bash</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/linux">#linux</a>
+      </div>
+    
+  
+</div>
+
+    <div class="date"> 2020-01-19 </div>
+    
+  </div>
+</footer>
+
+
+  
+  
+
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+
+  
+  <a href="https://github.com/gyorb" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/gyorgyorban" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2019, Gyorgy Orban all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+

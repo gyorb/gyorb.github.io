@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2019, Gyorgy Orban all rights reserved.</copyright>
-    <lastBuildDate>Thu, 23 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jan 2020 16:32:32 +0100</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,6 +20,15 @@
       <guid>/code/</guid>
       <description>CodeChecker With CodeChecker we created a tool to view and manage the results found by multiple static analyzers like Clang Static Analyzer and Clang Tidy.
 You can check your C/C++ project easily and filter/view the results on a web interface or in the command line. With the command line interface integration to the Continous Integration loops can be done easily.</description>
+    </item>
+    
+    <item>
+      <title>Using fzf to quick access my notes from the cli</title>
+      <link>/post/fzf-notes/</link>
+      <pubDate>Sun, 19 Jan 2020 16:32:32 +0100</pubDate>
+      
+      <guid>/post/fzf-notes/</guid>
+      <description>I wanted to create a simple script to quickly access my notes from the command line. fzf is a great and flexible tool which can be used to fuzzy search in the given input, like the file names in my notes directory. I already use it to search in the command line history and in vim to open files with fzf.vim. In this post I will walk you through how I built my note script using fzf.</description>
     </item>
     
     <item>
