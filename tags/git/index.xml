@@ -19,7 +19,7 @@
       
       <guid>/post/hugo_setup/</guid>
       <description>In this post I will introduce my current Hugo setup. I will show you how I configured the git repositories, how I write new posts and how easy it is to publish the generated site on GitHub pages. With a static site generator like Hugo it is really easy to create a blogging environment where your posts and your site is version controlled and stored in git.
-Why I&#39;ve changed my first setup I&#39;ve tried to use one git repository for the generated site and for the posts in markdown together.</description>
+Why I&amp;rsquo;ve changed my first setup I&amp;rsquo;ve tried to use one git repository for the generated site and for the posts in markdown together.</description>
     </item>
     
   </channel>
