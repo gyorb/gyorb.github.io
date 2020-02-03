@@ -6,7 +6,7 @@
     <description>Recent content on /dev/notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright (c) 2019, Gyorgy Orban all rights reserved.</copyright>
+    <copyright>Copyright (c) 2020, Gyorgy Orban all rights reserved.</copyright>
     <lastBuildDate>Sun, 19 Jan 2020 16:32:32 +0100</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,9 @@
       <pubDate>Sun, 09 Apr 2017 16:09:29 +0200</pubDate>
       
       <guid>/code/</guid>
-      <description>CodeChecker With CodeChecker we created a tool to view and manage the results found by multiple static analyzers like Clang Static Analyzer and Clang Tidy.
+      <description>hugo-dusk A simple minimalistic Hugo theme focusing on content and readability.
+The theme has a responsive and minimalistic design using HTML and CSS only.
+CodeChecker With CodeChecker we created a tool to view and manage the results found by multiple static analyzers like Clang Static Analyzer and Clang Tidy.
 You can check your C/C++ project easily and filter/view the results on a web interface or in the command line. With the command line interface integration to the Continous Integration loops can be done easily.</description>
     </item>
     
