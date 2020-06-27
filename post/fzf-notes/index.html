@@ -7,7 +7,7 @@
 <meta name="description" content="Personal blog about software development." />
 <meta name="keywords" content="linux, software development, python" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.63.2" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 <link rel="canonical" href="/post/fzf-notes/">
 <meta property="og:title" content="Using fzf to quick access my notes from the cli" />
@@ -116,7 +116,7 @@ files for the current and every sub directory. The first thing I do in the scrip
 is to change the directory where I store my notes and execute <code>fzf</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#e5e5e5">#!/bin/bash
 </span><span style="color:#e5e5e5"></span>
-<span style="color:#eedd82">notes_dir</span>=<span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$HOME</span><span style="color:#87ceeb">/notes</span><span style="color:#87ceeb">&#34;</span>
+<span style="color:#eedd82">notes_dir</span>=<span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$HOME</span><span style="color:#87ceeb">/notes&#34;</span>
 cd <span style="color:#eedd82">$notes_dir</span>
 </code></pre></div><p>I will need the output of fzf and the exit code later so I save them too.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#eedd82">fzf_output</span>=<span style="color:#f00">$(</span>fzf<span style="color:#f00">)</span>
@@ -167,7 +167,7 @@ is needed if some other editor is set in the environment.</p>
 <p>After going through on each part this is the whole script.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#e5e5e5">#!/bin/bash
 </span><span style="color:#e5e5e5"></span>
-<span style="color:#eedd82">notes_dir</span>=<span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$HOME</span><span style="color:#87ceeb">/notes</span><span style="color:#87ceeb">&#34;</span>
+<span style="color:#eedd82">notes_dir</span>=<span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$HOME</span><span style="color:#87ceeb">/notes&#34;</span>
 cd <span style="color:#eedd82">$notes_dir</span>
 
 <span style="color:#eedd82">fzf_output</span>=<span style="color:#f00">$(</span>fzf --reverse --prompt=<span style="color:#eedd82">$notes_dir</span>/ --border --print-query --preview=<span style="color:#87ceeb">&#34;head -n 20 {+}&#34;</span> --preview-window=down:50% --inline-info<span style="color:#f00">)</span>
