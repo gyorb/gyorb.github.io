@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2020, Gyorgy Orban all rights reserved.</copyright>
-    <lastBuildDate>Sun, 19 Jan 2020 16:32:32 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2020 10:20:53 +0200</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -22,6 +22,18 @@
 The theme has a responsive and minimalistic design using HTML and CSS only.
 CodeChecker With CodeChecker we created a tool to view and manage the results found by multiple static analyzers like Clang Static Analyzer and Clang Tidy.
 You can check your C/C++ project easily and filter/view the results on a web interface or in the command line. With the command line interface integration to the Continous Integration loops can be done easily.</description>
+    </item>
+    
+    <item>
+      <title>OpenSSH Hardening Tips</title>
+      <link>/post/openssh-hardening-tips/</link>
+      <pubDate>Sat, 27 Jun 2020 10:20:53 +0200</pubDate>
+      
+      <guid>/post/openssh-hardening-tips/</guid>
+      <description>&lt;p&gt;In this post I&amp;rsquo;ve collected some tips to harden the default &lt;a href=&#34;https://www.openssh.com/&#34;&gt;OpenSSH&lt;/a&gt;
+configuration on an Ubuntu LTS server. SSH protocol is usually used to connect to a remote machine securely.
+There are a lot of configuration options which can be used to make a server
+more secure. Disabling some features can help too if they are not needed.&lt;/p&gt;</description>
     </item>
     
     <item>

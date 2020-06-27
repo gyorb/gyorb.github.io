@@ -9,7 +9,72 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-01-19T16:32:32+01:00</lastmod>
+    <lastmod>2020-06-27T10:20:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-06-27T10:20:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2020-06-27T10:20:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/linux/</loc>
+    <lastmod>2020-06-27T10:20:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/openssh/</loc>
+    <lastmod>2020-06-27T10:20:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/openssh-hardening-tips/</loc>
+    <lastmod>2020-06-27T10:20:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-06-27T10:20:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/security/</loc>
+    <lastmod>2020-06-27T10:20:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/security/</loc>
+    <lastmod>2020-06-27T10:20:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/ssh/</loc>
+    <lastmod>2020-06-27T10:20:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-06-27T10:20:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/ubuntu/</loc>
+    <lastmod>2020-06-27T10:20:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/vps/</loc>
+    <lastmod>2020-06-27T10:20:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/vps/</loc>
+    <lastmod>2020-06-27T10:20:53+02:00</lastmod>
   </url>
   
   <url>
@@ -28,22 +93,7 @@
   </url>
   
   <url>
-    <loc>/tags/linux/</loc>
-    <lastmod>2020-01-19T16:32:32+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/note/</loc>
-    <lastmod>2020-01-19T16:32:32+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2020-01-19T16:32:32+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2020-01-19T16:32:32+01:00</lastmod>
   </url>
   
@@ -85,10 +135,6 @@
   <url>
     <loc>/about/</loc>
     <lastmod>2017-04-08T22:39:07+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
   </url>
   
 </urlset>

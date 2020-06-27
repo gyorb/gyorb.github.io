@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on /dev/notes</title>
-    <link>/tags/linux/</link>
-    <description>Recent content in linux on /dev/notes</description>
+    <title>openssh on /dev/notes</title>
+    <link>/tags/openssh/</link>
+    <description>Recent content in openssh on /dev/notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2020, Gyorgy Orban all rights reserved.</copyright>
     <lastBuildDate>Sat, 27 Jun 2020 10:20:53 +0200</lastBuildDate>
     
-	<atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/openssh/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -22,15 +22,6 @@
 configuration on an Ubuntu LTS server. SSH protocol is usually used to connect to a remote machine securely.
 There are a lot of configuration options which can be used to make a server
 more secure. Disabling some features can help too if they are not needed.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Using fzf to quick access my notes from the cli</title>
-      <link>/post/fzf-notes/</link>
-      <pubDate>Sun, 19 Jan 2020 16:32:32 +0100</pubDate>
-      
-      <guid>/post/fzf-notes/</guid>
-      <description>I wanted to create a simple script to quickly access my notes from the command line. fzf is a great and flexible tool which can be used to fuzzy search in the given input, like the file names in my notes directory. I already use it to search in the command line history and in vim to open files with fzf.vim. In this post I will walk you through how I built my note script using fzf.</description>
     </item>
     
   </channel>
