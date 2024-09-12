@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>note on /dev/notes</title>
+    <title>Note on /dev/notes</title>
     <link>/tags/note/</link>
-    <description>Recent content in note on /dev/notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Note on /dev/notes</description>
+    <generator>Hugo</generator>
     <language>en-US</language>
-    <copyright>Copyright (c) 2020, Gyorgy Orban all rights reserved.</copyright>
+    <copyright>Copyright (c) 2024, Gyorgy Orban all rights reserved.</copyright>
     <lastBuildDate>Sun, 19 Jan 2020 16:32:32 +0100</lastBuildDate>
-    
-	<atom:link href="/tags/note/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="/tags/note/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using fzf to quick access my notes from the cli</title>
       <link>/post/fzf-notes/</link>
       <pubDate>Sun, 19 Jan 2020 16:32:32 +0100</pubDate>
-      
       <guid>/post/fzf-notes/</guid>
       <description>I wanted to create a simple script to quickly access my notes from the command line. fzf is a great and flexible tool which can be used to fuzzy search in the given input, like the file names in my notes directory. I already use it to search in the command line history and in vim to open files with fzf.vim. In this post I will walk you through how I built my note script using fzf.</description>
     </item>
-    
   </channel>
 </rss>

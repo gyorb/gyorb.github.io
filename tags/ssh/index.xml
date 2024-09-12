@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ssh on /dev/notes</title>
+    <title>Ssh on /dev/notes</title>
     <link>/tags/ssh/</link>
-    <description>Recent content in ssh on /dev/notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Ssh on /dev/notes</description>
+    <generator>Hugo</generator>
     <language>en-US</language>
-    <copyright>Copyright (c) 2020, Gyorgy Orban all rights reserved.</copyright>
-    <lastBuildDate>Sat, 27 Jun 2020 10:20:53 +0200</lastBuildDate>
-    
-	<atom:link href="/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>Copyright (c) 2024, Gyorgy Orban all rights reserved.</copyright>
+    <lastBuildDate>Sat, 27 Jun 2020 10:20:53 +0000</lastBuildDate>
+    <atom:link href="/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OpenSSH Hardening Tips</title>
       <link>/post/openssh-hardening-tips/</link>
-      <pubDate>Sat, 27 Jun 2020 10:20:53 +0200</pubDate>
-      
+      <pubDate>Sat, 27 Jun 2020 10:20:53 +0000</pubDate>
       <guid>/post/openssh-hardening-tips/</guid>
-      <description>&lt;p&gt;In this post I&amp;rsquo;ve collected some tips to harden the default &lt;a href=&#34;https://www.openssh.com/&#34;&gt;OpenSSH&lt;/a&gt;
-configuration on an Ubuntu LTS server. SSH protocol is usually used to connect to a remote machine securely.
-There are a lot of configuration options which can be used to make a server
-more secure. Disabling some features can help too if they are not needed.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this post I&amp;rsquo;ve collected some tips to harden the default &lt;a href=&#34;https://www.openssh.com/&#34;&gt;OpenSSH&lt;/a&gt;&#xA;configuration on an Ubuntu LTS server. SSH protocol is usually used to connect to a remote machine securely.&#xA;There are a lot of configuration options which can be used to make a server&#xA;more secure. Disabling some features can help too if they are not needed.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

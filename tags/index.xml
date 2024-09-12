@@ -4,139 +4,108 @@
     <title>Tags on /dev/notes</title>
     <link>/tags/</link>
     <description>Recent content in Tags on /dev/notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-US</language>
-    <copyright>Copyright (c) 2020, Gyorgy Orban all rights reserved.</copyright>
-    <lastBuildDate>Sat, 27 Jun 2020 10:20:53 +0200</lastBuildDate>
-    
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>Copyright (c) 2024, Gyorgy Orban all rights reserved.</copyright>
+    <lastBuildDate>Sat, 27 Jun 2020 10:20:53 +0000</lastBuildDate>
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>linux</title>
+      <title>Linux</title>
       <link>/tags/linux/</link>
-      <pubDate>Sat, 27 Jun 2020 10:20:53 +0200</pubDate>
-      
+      <pubDate>Sat, 27 Jun 2020 10:20:53 +0000</pubDate>
       <guid>/tags/linux/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>openssh</title>
+      <title>Openssh</title>
       <link>/tags/openssh/</link>
-      <pubDate>Sat, 27 Jun 2020 10:20:53 +0200</pubDate>
-      
+      <pubDate>Sat, 27 Jun 2020 10:20:53 +0000</pubDate>
       <guid>/tags/openssh/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>security</title>
+      <title>Security</title>
       <link>/tags/security/</link>
-      <pubDate>Sat, 27 Jun 2020 10:20:53 +0200</pubDate>
-      
+      <pubDate>Sat, 27 Jun 2020 10:20:53 +0000</pubDate>
       <guid>/tags/security/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ssh</title>
+      <title>Ssh</title>
       <link>/tags/ssh/</link>
-      <pubDate>Sat, 27 Jun 2020 10:20:53 +0200</pubDate>
-      
+      <pubDate>Sat, 27 Jun 2020 10:20:53 +0000</pubDate>
       <guid>/tags/ssh/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ubuntu</title>
+      <title>Ubuntu</title>
       <link>/tags/ubuntu/</link>
-      <pubDate>Sat, 27 Jun 2020 10:20:53 +0200</pubDate>
-      
+      <pubDate>Sat, 27 Jun 2020 10:20:53 +0000</pubDate>
       <guid>/tags/ubuntu/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>vps</title>
+      <title>Vps</title>
       <link>/tags/vps/</link>
-      <pubDate>Sat, 27 Jun 2020 10:20:53 +0200</pubDate>
-      
+      <pubDate>Sat, 27 Jun 2020 10:20:53 +0000</pubDate>
       <guid>/tags/vps/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>bash</title>
+      <title>Bash</title>
       <link>/tags/bash/</link>
       <pubDate>Sun, 19 Jan 2020 16:32:32 +0100</pubDate>
-      
       <guid>/tags/bash/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>cli</title>
+      <title>Cli</title>
       <link>/tags/cli/</link>
       <pubDate>Sun, 19 Jan 2020 16:32:32 +0100</pubDate>
-      
       <guid>/tags/cli/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>fzf</title>
+      <title>Fzf</title>
       <link>/tags/fzf/</link>
       <pubDate>Sun, 19 Jan 2020 16:32:32 +0100</pubDate>
-      
       <guid>/tags/fzf/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>note</title>
+      <title>Note</title>
       <link>/tags/note/</link>
       <pubDate>Sun, 19 Jan 2020 16:32:32 +0100</pubDate>
-      
       <guid>/tags/note/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>blog</title>
+      <title>Blog</title>
       <link>/tags/blog/</link>
       <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
-      
       <guid>/tags/blog/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>git</title>
+      <title>Git</title>
       <link>/tags/git/</link>
       <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
-      
       <guid>/tags/git/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>github</title>
+      <title>Github</title>
       <link>/tags/github/</link>
       <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
-      
       <guid>/tags/github/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>hugo</title>
+      <title>Hugo</title>
       <link>/tags/hugo/</link>
       <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
-      
       <guid>/tags/hugo/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

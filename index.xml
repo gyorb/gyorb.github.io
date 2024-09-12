@@ -4,77 +4,52 @@
     <title>/dev/notes</title>
     <link>/</link>
     <description>Recent content on /dev/notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-US</language>
-    <copyright>Copyright (c) 2020, Gyorgy Orban all rights reserved.</copyright>
-    <lastBuildDate>Sat, 27 Jun 2020 10:20:53 +0200</lastBuildDate>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>Copyright (c) 2024, Gyorgy Orban all rights reserved.</copyright>
+    <lastBuildDate>Sat, 27 Jun 2020 10:20:53 +0000</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Code</title>
       <link>/code/</link>
       <pubDate>Sun, 09 Apr 2017 16:09:29 +0200</pubDate>
-      
       <guid>/code/</guid>
-      <description>hugo-dusk A simple minimalistic Hugo theme focusing on content and readability.
-The theme has a responsive and minimalistic design using HTML and CSS only.
-CodeChecker With CodeChecker we created a tool to view and manage the results found by multiple static analyzers like Clang Static Analyzer and Clang Tidy.
-You can check your C/C++ project easily and filter/view the results on a web interface or in the command line. With the command line interface integration to the Continous Integration loops can be done easily.</description>
+      <description>hugo-dusk A simple minimalistic Hugo theme focusing on content and readability.&#xA;The theme has a responsive and minimalistic design using HTML and CSS only.&#xA;CodeChecker With CodeChecker we created a tool to view and manage the results found by multiple static analyzers like Clang Static Analyzer and Clang Tidy.&#xA;You can check your C/C++ project easily and filter/view the results on a web interface or in the command line. With the command line interface integration to the Continous Integration loops can be done easily.</description>
     </item>
-    
     <item>
       <title>OpenSSH Hardening Tips</title>
       <link>/post/openssh-hardening-tips/</link>
-      <pubDate>Sat, 27 Jun 2020 10:20:53 +0200</pubDate>
-      
+      <pubDate>Sat, 27 Jun 2020 10:20:53 +0000</pubDate>
       <guid>/post/openssh-hardening-tips/</guid>
-      <description>&lt;p&gt;In this post I&amp;rsquo;ve collected some tips to harden the default &lt;a href=&#34;https://www.openssh.com/&#34;&gt;OpenSSH&lt;/a&gt;
-configuration on an Ubuntu LTS server. SSH protocol is usually used to connect to a remote machine securely.
-There are a lot of configuration options which can be used to make a server
-more secure. Disabling some features can help too if they are not needed.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this post I&amp;rsquo;ve collected some tips to harden the default &lt;a href=&#34;https://www.openssh.com/&#34;&gt;OpenSSH&lt;/a&gt;&#xA;configuration on an Ubuntu LTS server. SSH protocol is usually used to connect to a remote machine securely.&#xA;There are a lot of configuration options which can be used to make a server&#xA;more secure. Disabling some features can help too if they are not needed.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Using fzf to quick access my notes from the cli</title>
       <link>/post/fzf-notes/</link>
       <pubDate>Sun, 19 Jan 2020 16:32:32 +0100</pubDate>
-      
       <guid>/post/fzf-notes/</guid>
       <description>I wanted to create a simple script to quickly access my notes from the command line. fzf is a great and flexible tool which can be used to fuzzy search in the given input, like the file names in my notes directory. I already use it to search in the command line history and in vim to open files with fzf.vim. In this post I will walk you through how I built my note script using fzf.</description>
     </item>
-    
     <item>
       <title>My Hugo setup for GitHub pages</title>
       <link>/post/hugo_setup/</link>
       <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
-      
       <guid>/post/hugo_setup/</guid>
-      <description>In this post I will introduce my current Hugo setup. I will show you how I configured the git repositories, how I write new posts and how easy it is to publish the generated site on GitHub pages. With a static site generator like Hugo it is really easy to create a blogging environment where your posts and your site is version controlled and stored in git.
-Why I&amp;rsquo;ve changed my first setup I&amp;rsquo;ve tried to use one git repository for the generated site and for the posts in markdown together.</description>
+      <description>In this post I will introduce my current Hugo setup. I will show you how I configured the git repositories, how I write new posts and how easy it is to publish the generated site on GitHub pages. With a static site generator like Hugo it is really easy to create a blogging environment where your posts and your site is version controlled and stored in git.&#xA;Why I&amp;rsquo;ve changed my first setup I&amp;rsquo;ve tried to use one git repository for the generated site and for the posts in markdown together.</description>
     </item>
-    
     <item>
       <title>Hello world!</title>
       <link>/post/hello-world/</link>
       <pubDate>Sat, 22 Apr 2017 23:13:53 +0200</pubDate>
-      
       <guid>/post/hello-world/</guid>
-      <description>Hi, my name is Gyorgy Orban and I work as a software developer. I thougth about starting a technical blog a long time ago and now it&amp;rsquo;s time to start it. My goal with this blog is to organize, archive and share my thoughts.
-I plan to post about the projects I&amp;rsquo;m working on or about technologies I find interesting and useful.
-Stay tuned for my next post!</description>
+      <description>Hi, my name is Gyorgy Orban and I work as a software developer. I thougth about starting a technical blog a long time ago and now it&amp;rsquo;s time to start it. My goal with this blog is to organize, archive and share my thoughts.&#xA;I plan to post about the projects I&amp;rsquo;m working on or about technologies I find interesting and useful.&#xA;Stay tuned for my next post!</description>
     </item>
-    
     <item>
       <title>About</title>
       <link>/about/</link>
       <pubDate>Sat, 08 Apr 2017 22:39:07 +0200</pubDate>
-      
       <guid>/about/</guid>
-      <description>Who am I? Hi, I&amp;rsquo;m Gyorgy Orban and this is my personal blog. I love to create software and I&amp;rsquo;m a full time software developer. I&amp;rsquo;ve worked on multiple telecom related projects over the years. Currently I&amp;rsquo;m involved in the open source development of the CodeChecker project.
-I code mostly in Python but I play with other languages too. You can read more about my projects on my code page.</description>
+      <description>Who am I? Hi, I&amp;rsquo;m Gyorgy Orban and this is my personal blog. I love to create software and I&amp;rsquo;m a full time software developer. I&amp;rsquo;ve worked on multiple telecom related projects over the years. Currently I&amp;rsquo;m involved in the open source development of the CodeChecker project.&#xA;I code mostly in Python but I play with other languages too. You can read more about my projects on my code page.</description>
     </item>
-    
   </channel>
 </rss>
